@@ -29,14 +29,14 @@ export default function Nav() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6" aria-label="Main">
-        <a href="#top" className="font-mono text-sm font-semibold text-white">
+        <a href="#top" className="py-2 font-mono text-sm font-semibold text-white">
           <span className="text-accent">~/</span>alex-rajdhami
         </a>
 
         <ul className="hidden items-center gap-7 text-sm text-slate-400 md:flex">
           {LINKS.map(([label, href]) => (
             <li key={href}>
-              <a href={href} className="transition hover:text-white">{label}</a>
+              <a href={href} className="inline-block py-2 transition hover:text-white">{label}</a>
             </li>
           ))}
           <li>

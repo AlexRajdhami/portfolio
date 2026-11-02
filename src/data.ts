@@ -5,7 +5,7 @@ export const PROFILE = {
   email: 'alexrajdhami611@gmail.com',
   github: 'https://github.com/AlexRajdhami',
   linkedin: 'https://linkedin.com/in/alexrajdhami',
-  cv: '/Alex_Rajdhami_CV.pdf',
+  cv: 'Alex_Rajdhami_CV.pdf',
 };
 
 export type Project = {
@@ -15,6 +15,7 @@ export type Project = {
   points: string[];
   stack: string[];
   image: string;
+  height: number; // image height at 1200px wide (prevents layout shift)
   live: string;
   code: string;
 };
@@ -31,7 +32,8 @@ export const PROJECTS: Project[] = [
       'Live job adverts from the Reed API; deployed on Render (API) and Vercel (frontend)',
     ],
     stack: ['Python', 'Flask', 'React', 'scikit-learn', 'spaCy', 'SQL'],
-    image: '/projects/ai-career.webp',
+    image: 'projects/ai-career.webp',
+    height: 755,
     live: 'https://ai-career-recommender-neon.vercel.app',
     code: 'https://github.com/AlexRajdhami/ai-career-recommender',
   },
@@ -46,7 +48,8 @@ export const PROJECTS: Project[] = [
       'Live on the Sepolia test network with MetaMask and one-click network switching',
     ],
     stack: ['Solidity', 'Truffle', 'React', 'ethers.js', 'GitHub Actions'],
-    image: '/projects/escrow.webp',
+    image: 'projects/escrow.webp',
+    height: 806,
     live: 'https://alexrajdhami.github.io/freelance-escrow-dapp/',
     code: 'https://github.com/AlexRajdhami/freelance-escrow-dapp',
   },
@@ -61,7 +64,8 @@ export const PROJECTS: Project[] = [
       'Typed with TypeScript, tested with Vitest, deployed by GitHub Actions',
     ],
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Vitest'],
-    image: '/projects/lumiere.webp',
+    image: 'projects/lumiere.webp',
+    height: 750,
     live: 'https://alexrajdhami.github.io/photography-portfolio/',
     code: 'https://github.com/AlexRajdhami/photography-portfolio',
   },
@@ -76,7 +80,8 @@ export const PROJECTS: Project[] = [
       '16 unit tests for cart maths, promo codes and form validation',
     ],
     stack: ['HTML', 'CSS', 'JavaScript', 'Node test runner'],
-    image: '/projects/synth.webp',
+    image: 'projects/synth.webp',
+    height: 630,
     live: 'https://alexrajdhami.github.io/Synth/',
     code: 'https://github.com/AlexRajdhami/Synth',
   },
@@ -177,16 +182,16 @@ export type DesignItem = { src: string; title: string; client: string; cat: 'Soc
 export const DESIGN_CATS = ['All', 'Social media', 'Web & UI', 'Print & apparel'] as const;
 
 export const DESIGNS: DesignItem[] = [
-  { src: '/design/ui-agency.webp', title: 'Creative agency landing page', client: 'Pixel Digital Art', cat: 'Web & UI' },
-  { src: '/design/agency-window.webp', title: '“Your website is your window”', client: 'Digital agency campaign', cat: 'Social media' },
-  { src: '/design/cake-birthday.webp', title: 'Birthday cakes promotion', client: 'Cake Heist bakery', cat: 'Social media' },
-  { src: '/design/ui-tech-store.webp', title: 'Gaming tech store homepage', client: 'Concept UI', cat: 'Web & UI' },
-  { src: '/design/monitor-curved.webp', title: 'Curved monitor product ad', client: 'Electronics retailer', cat: 'Social media' },
-  { src: '/design/tshirt.webp', title: 'Florida 1989 T-shirt graphic', client: 'Apparel design', cat: 'Print & apparel' },
-  { src: '/design/study-usa.webp', title: '“Why study in the USA?”', client: 'Education consultancy', cat: 'Social media' },
-  { src: '/design/agency-build.webp', title: '“We build a website that builds your business”', client: 'Digital agency campaign', cat: 'Social media' },
-  { src: '/design/poster-talking.webp', title: 'Typographic poster', client: 'Personal project', cat: 'Print & apparel' },
-  { src: '/design/router.webp', title: 'Wi-Fi router product ad', client: 'Electronics retailer', cat: 'Social media' },
-  { src: '/design/cake-fathers-day.webp', title: 'Father’s Day special', client: 'Cake Heist bakery', cat: 'Social media' },
-  { src: '/design/ui-agency-full.webp', title: 'Agency website – full page', client: 'Pixel Digital Art', cat: 'Web & UI' },
+  { src: 'design/ui-agency.webp', title: 'Creative agency landing page', client: 'Pixel Digital Art', cat: 'Web & UI' },
+  { src: 'design/agency-window.webp', title: '“Your website is your window”', client: 'Digital agency campaign', cat: 'Social media' },
+  { src: 'design/cake-birthday.webp', title: 'Birthday cakes promotion', client: 'Cake Heist bakery', cat: 'Social media' },
+  { src: 'design/ui-tech-store.webp', title: 'Gaming tech store homepage', client: 'Concept UI', cat: 'Web & UI' },
+  { src: 'design/monitor-curved.webp', title: 'Curved monitor product ad', client: 'Electronics retailer', cat: 'Social media' },
+  { src: 'design/tshirt.webp', title: 'Florida 1989 T-shirt graphic', client: 'Apparel design', cat: 'Print & apparel' },
+  { src: 'design/study-usa.webp', title: '“Why study in the USA?”', client: 'Education consultancy', cat: 'Social media' },
+  { src: 'design/agency-build.webp', title: '“We build a website that builds your business”', client: 'Digital agency campaign', cat: 'Social media' },
+  { src: 'design/poster-talking.webp', title: 'Typographic poster', client: 'Personal project', cat: 'Print & apparel' },
+  { src: 'design/router.webp', title: 'Wi-Fi router product ad', client: 'Electronics retailer', cat: 'Social media' },
+  { src: 'design/cake-fathers-day.webp', title: 'Father’s Day special', client: 'Cake Heist bakery', cat: 'Social media' },
+  { src: 'design/ui-agency-full.webp', title: 'Agency website – full page', client: 'Pixel Digital Art', cat: 'Web & UI' },
 ];

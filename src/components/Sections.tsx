@@ -30,13 +30,13 @@ export function Hero() {
       <div className="grid-bg pointer-events-none absolute inset-0" aria-hidden />
       <div className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl" aria-hidden />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-4 pb-16 md:px-6 md:pb-24 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="relative mx-auto grid grid-cols-1 max-w-6xl items-center gap-14 px-4 pb-16 md:px-6 md:pb-24 lg:grid-cols-[1.15fr_0.85fr]">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" aria-hidden />
             Available for IT support & junior developer roles
           </p>
-          <h1 className="text-[2.6rem] font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[4.2rem]">
+          <h1 className="text-[2.6rem] font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[3.6rem] xl:text-[4.2rem]">
             Alex Rajdhami
             <span className="mt-3 block bg-gradient-to-r from-accent via-sky-300 to-indigo-300 bg-clip-text text-transparent">
               IT Support & Junior Developer
@@ -55,9 +55,9 @@ export function Hero() {
             </a>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-5 text-slate-400">
-            <a href={PROFILE.github} {...ext} aria-label="GitHub" className="transition hover:text-white"><Github size={22} /></a>
-            <a href={PROFILE.linkedin} {...ext} aria-label="LinkedIn" className="transition hover:text-white"><Linkedin size={22} /></a>
-            <a href={`mailto:${PROFILE.email}`} aria-label="Email" className="transition hover:text-white"><Mail size={22} /></a>
+            <a href={PROFILE.github} {...ext} aria-label="GitHub" className="-m-2 p-2 transition hover:text-white"><Github size={22} /></a>
+            <a href={PROFILE.linkedin} {...ext} aria-label="LinkedIn" className="-m-2 p-2 transition hover:text-white"><Linkedin size={22} /></a>
+            <a href={`mailto:${PROFILE.email}`} aria-label="Email" className="-m-2 p-2 transition hover:text-white"><Mail size={22} /></a>
             <span className="inline-flex items-center gap-1.5 text-sm"><MapPin size={16} aria-hidden /> {PROFILE.location}</span>
           </div>
         </motion.div>
@@ -70,14 +70,14 @@ export function Hero() {
         >
           <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-accent/40 via-sky-400/10 to-indigo-500/30 blur-xl" aria-hidden />
           <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-ink-800">
-            <img src="/img/alex.webp" alt="Alex Rajdhami" width={600} height={900} fetchPriority="high" className="aspect-[4/5] w-full object-cover object-top" />
+            <img src="img/alex.webp" alt="Alex Rajdhami" width={600} height={900} fetchPriority="high" className="aspect-[4/5] w-full object-cover object-top" />
             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink-950/80 to-transparent" aria-hidden />
           </div>
-          <div className="absolute -left-4 top-8 rounded-xl border border-white/10 bg-ink-900/90 px-4 py-3 shadow-xl backdrop-blur sm:-left-10">
+          <div className="absolute -left-4 top-8 rounded-xl border border-white/10 bg-ink-900/90 px-4 py-3 shadow-xl backdrop-blur xl:-left-10">
             <p className="text-sm font-semibold text-white">Surrey · London</p>
             <p className="text-xs text-slate-400">or remote</p>
           </div>
-          <div className="absolute -right-3 bottom-10 flex items-center gap-3 rounded-xl border border-white/10 bg-ink-900/90 px-4 py-3 shadow-xl backdrop-blur sm:-right-8">
+          <div className="absolute -right-3 bottom-10 flex items-center gap-3 rounded-xl border border-white/10 bg-ink-900/90 px-4 py-3 shadow-xl backdrop-blur xl:-right-8">
             <GraduationCap size={22} className="text-accent" aria-hidden />
             <div>
               <p className="text-sm font-semibold text-white">BSc (Hons) CS</p>
@@ -98,7 +98,7 @@ export function Hero() {
             <div key={l}>
               <dt className="sr-only">{l}</dt>
               <dd className="text-xl font-semibold text-white md:text-2xl">{v}</dd>
-              <dd className="mt-1 text-xs uppercase tracking-wider text-slate-500">{l}</dd>
+              <dd className="mt-1 text-xs uppercase tracking-wider text-slate-400">{l}</dd>
             </div>
           ))}
         </dl>
@@ -113,7 +113,7 @@ export function About() {
   return (
     <section id="about" className="scroll-mt-20 border-t border-white/5 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <motion.div {...reveal}>
             <Heading kicker="01. about" title="Tech skills, with a people-first background" />
             <div className="space-y-4 leading-relaxed text-slate-400">
@@ -198,7 +198,7 @@ export function Projects() {
             <motion.article
               {...reveal}
               key={p.title}
-              className="grid overflow-hidden rounded-2xl border border-white/5 bg-ink-900 lg:grid-cols-2"
+              className="grid grid-cols-1 overflow-hidden rounded-2xl border border-white/5 bg-ink-900 lg:grid-cols-2"
             >
               <a
                 href={p.live}
@@ -216,6 +216,8 @@ export function Projects() {
                     src={p.image}
                     alt={`Screenshot of ${p.title}`}
                     loading="lazy"
+                    width={1200}
+                    height={p.height}
                     className="block h-auto w-full transition duration-500 group-hover:scale-[1.02]"
                   />
                 </div>
@@ -254,14 +256,14 @@ export function Projects() {
 export function Experience() {
   return (
     <section id="experience" className="scroll-mt-20 border-t border-white/5 py-20 md:py-28">
-      <div className="mx-auto grid max-w-6xl gap-14 px-4 md:px-6 lg:grid-cols-[1.25fr_0.75fr]">
+      <div className="mx-auto grid grid-cols-1 max-w-6xl gap-14 px-4 md:px-6 lg:grid-cols-[1.25fr_0.75fr]">
         <div>
           <Heading kicker="05. experience" title="Where I’ve worked" />
           <ol className="relative space-y-10 border-l border-white/10 pl-7">
             {EXPERIENCE.map((e) => (
               <motion.li {...reveal} key={e.role} className="relative">
                 <span className="absolute -left-[35px] top-1 grid h-4 w-4 place-items-center rounded-full border-2 border-accent bg-ink-950" aria-hidden />
-                <p className="font-mono text-xs text-slate-500">{e.dates}</p>
+                <p className="font-mono text-xs text-slate-400">{e.dates}</p>
                 <h3 className="mt-1 text-lg font-semibold text-white">{e.role}</h3>
                 <p className="text-sm text-accent">{e.org}</p>
                 <ul className="mt-3 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-slate-400 marker:text-slate-600">
@@ -277,7 +279,7 @@ export function Experience() {
             <h3 className="mb-5 flex items-center gap-2 text-lg font-semibold text-white"><GraduationCap size={20} className="text-accent" aria-hidden /> Education</h3>
             {EDUCATION.map((ed) => (
               <div key={ed.title} className="rounded-xl border border-white/5 bg-ink-900 p-5">
-                <p className="font-mono text-xs text-slate-500">{ed.dates}</p>
+                <p className="font-mono text-xs text-slate-400">{ed.dates}</p>
                 <p className="mt-1 font-semibold text-white">{ed.title}</p>
                 <p className="text-sm text-accent">{ed.org}</p>
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">{ed.text}</p>
@@ -290,7 +292,7 @@ export function Experience() {
               {CERTS.map((c) => (
                 <li key={c.title} className="rounded-xl border border-white/5 bg-ink-900 px-5 py-4">
                   <p className="text-sm font-medium text-white">{c.title}</p>
-                  <p className="mt-0.5 text-xs text-slate-500">{c.org} · {c.year}</p>
+                  <p className="mt-0.5 text-xs text-slate-400">{c.org} · {c.year}</p>
                 </li>
               ))}
             </ul>
@@ -331,7 +333,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="scroll-mt-20 border-t border-white/5 py-20 md:py-28">
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 md:px-6 lg:grid-cols-2">
+      <div className="mx-auto grid grid-cols-1 max-w-6xl gap-12 px-4 md:px-6 lg:grid-cols-2">
         <div>
           <Heading kicker="06. contact" title="Let’s work together" />
           <p className="-mt-4 max-w-md leading-relaxed text-slate-400">
@@ -340,8 +342,8 @@ export function Contact() {
           </p>
 
           <div className="mt-8 flex max-w-md items-center gap-2 rounded-xl border border-white/10 bg-ink-900 p-2 pl-4">
-            <Mail size={18} className="shrink-0 text-slate-500" aria-hidden />
-            <a href={`mailto:${PROFILE.email}`} className="min-w-0 flex-1 truncate text-slate-200 hover:text-white">{PROFILE.email}</a>
+            <Mail size={18} className="shrink-0 text-slate-400" aria-hidden />
+            <a href={`mailto:${PROFILE.email}`} className="min-w-0 flex-1 truncate text-sm text-slate-200 sm:text-base hover:text-white">{PROFILE.email}</a>
             <button type="button" onClick={copy} className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-white/5 px-3 py-2 text-sm text-slate-300 transition hover:bg-white/10" aria-live="polite">
               {copied ? <><Check size={15} aria-hidden /> Copied</> : <><Copy size={15} aria-hidden /> Copy</>}
             </button>
@@ -367,7 +369,7 @@ export function Contact() {
               <input className={`${field} mt-1.5`} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} autoComplete="name" required />
             </label>
             <label className="block text-sm text-slate-300">
-              Company <span className="text-slate-500">(optional)</span>
+              Company <span className="text-slate-400">(optional)</span>
               <input className={`${field} mt-1.5`} value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} autoComplete="organization" />
             </label>
           </div>
@@ -379,7 +381,7 @@ export function Contact() {
           <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 font-medium text-ink-950 transition hover:bg-accent-soft">
             <Mail size={18} aria-hidden /> Send message
           </button>
-          <p className="text-center text-xs text-slate-500">Opens your email app with the message ready to send.</p>
+          <p className="text-center text-xs text-slate-400">Opens your email app with the message ready to send.</p>
         </form>
       </div>
     </section>
@@ -388,7 +390,7 @@ export function Contact() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 py-8 text-sm text-slate-500">
+    <footer className="border-t border-white/5 py-8 text-sm text-slate-400">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 md:px-6">
         <p>© {new Date().getFullYear()} {PROFILE.name}</p>
         <p>
