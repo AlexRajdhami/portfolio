@@ -92,7 +92,7 @@ export function Hero() {
           {[
             ['BSc (Hons)', 'Computer Science'],
             ['2+ years', 'people-facing care work'],
-            ['4 projects', 'live with source code'],
+            ['5 projects', 'live with source code'],
             ['UK', 'full right to work'],
           ].map(([v, l]) => (
             <div key={l}>
@@ -119,7 +119,7 @@ export function About() {
             <div className="space-y-4 leading-relaxed text-slate-400">
               <p>
                 I graduated with a BSc (Hons) in Computer Science from the University of East London in 2026. My final-year
-                project was an AI career recommender, and I’ve since finished and deployed four projects end to end – from
+                project was an AI career recommender, and I’ve since finished and published several more projects end to end – from
                 the code and tests to CI/CD and hosting.
               </p>
               <p>
@@ -238,7 +238,7 @@ export function Projects() {
                 </ul>
                 <div className="mt-auto flex flex-wrap gap-3 pt-7">
                   <a href={p.live} {...ext} className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-ink-950 transition hover:bg-accent-soft">
-                    <ExternalLink size={16} aria-hidden /> Live demo
+                    <ExternalLink size={16} aria-hidden /> {p.liveLabel ?? 'Live demo'}
                   </a>
                   <a href={p.code} {...ext} className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-white/5">
                     <Github size={16} aria-hidden /> Source code

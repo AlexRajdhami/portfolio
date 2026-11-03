@@ -10,6 +10,7 @@ export const PROFILE = {
 
 export type Project = {
   title: string;
+  liveLabel?: string;
   tag: string;
   summary: string;
   points: string[];
@@ -52,6 +53,23 @@ export const PROJECTS: Project[] = [
     height: 806,
     live: 'https://alexrajdhami.github.io/freelance-escrow-dapp/',
     code: 'https://github.com/AlexRajdhami/freelance-escrow-dapp',
+  },
+  {
+    title: 'Fashion-MNIST & Wine Clustering',
+    tag: 'Machine learning',
+    summary:
+      'Two machine-learning studies: recognising clothing in 70,000 images, and finding natural groups of white wines from their chemistry.',
+    points: [
+      'CNN reached 90.4% test accuracy, beating an ANN (87.3%) and Logistic Regression (84.4%)',
+      'K-Means vs K-Medoids on 4,898 wines, compared with silhouette scores and PCA',
+      'University group coursework (team of 5) – I wrote the code; runs in one click on Google Colab',
+    ],
+    stack: ['Python', 'TensorFlow / Keras', 'scikit-learn', 'pandas', 'Colab'],
+    image: 'projects/ml.webp',
+    height: 750,
+    liveLabel: 'Open in Colab',
+    live: 'https://colab.research.google.com/github/AlexRajdhami/ml-classification-clustering/blob/main/notebooks/01_fashion_mnist_classification.ipynb',
+    code: 'https://github.com/AlexRajdhami/ml-classification-clustering',
   },
   {
     title: 'Lumière Studio',
@@ -110,7 +128,7 @@ export const SKILLS: { group: string; items: string[] }[] = [
   },
   {
     group: 'Development',
-    items: ['Python', 'JavaScript / TypeScript', 'React', 'Flask', 'SQL', 'Solidity', 'Tailwind CSS'],
+    items: ['Python', 'JavaScript / TypeScript', 'React', 'Flask', 'SQL', 'Machine learning (scikit-learn, Keras)', 'Solidity', 'Tailwind CSS'],
   },
   {
     group: 'Tools & design',
