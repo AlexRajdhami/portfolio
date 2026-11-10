@@ -236,6 +236,7 @@ export function Projects() {
                     <li key={s} className="rounded-md bg-white/[0.04] px-2 py-1 font-mono text-xs text-slate-400">{s}</li>
                   ))}
                 </ul>
+                {p.note && <p className="mt-5 text-xs leading-relaxed text-slate-400">{p.note}</p>}
                 <div className="mt-auto flex flex-wrap gap-3 pt-7">
                   <a href={p.live} {...ext} className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-ink-950 transition hover:bg-accent-soft">
                     <ExternalLink size={16} aria-hidden /> {p.liveLabel ?? 'Live demo'}

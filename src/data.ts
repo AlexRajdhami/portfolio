@@ -20,6 +20,7 @@ export type Project = {
   live: string;
   extra?: { label: string; href: string }[];
   code?: string;
+  note?: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -40,6 +41,7 @@ export const PROJECTS: Project[] = [
     liveLabel: 'Book tickets',
     live: 'https://book.tenerifetrustedtickets.com/',
     extra: [{ label: 'Book transfers', href: 'https://book.tenerifetrustedtransfers.com/' }],
+    note: 'These are real customer booking pages – feel free to look around, but please don’t send test bookings.',
   },
   {
     title: 'Tenerife Trusted Tickets – Website',
