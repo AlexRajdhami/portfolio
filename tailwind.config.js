@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        signature: ['"Mr Dafoe"', '"Brush Script MT"', 'cursive'],
       },
       colors: {
         ink: { 950: '#07090d', 900: '#0b0f16', 800: '#111722', 700: '#1a2230' },
