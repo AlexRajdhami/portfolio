@@ -18,10 +18,45 @@ export type Project = {
   image: string;
   height: number; // image height at 1200px wide (prevents layout shift)
   live: string;
-  code: string;
+  extra?: { label: string; href: string }[];
+  code?: string;
 };
 
 export const PROJECTS: Project[] = [
+  {
+    title: 'Tenerife Trusted – Booking & Admin System',
+    tag: 'Current job · in production',
+    summary:
+      'The live booking and management system I build and run for two Tenerife businesses: airport transfers and excursion tickets. Customers book online; staff manage everything from one admin area.',
+    points: [
+      '5-step booking forms in English, Spanish and German, pre-filled from the websites',
+      'Admin offices with dashboards, booking status pipeline, price / cost / profit, driver assignment, CSV export and analytics',
+      'Supabase (PostgreSQL) with row-level security and fully separate data for each business; rate-limited public bookings',
+      'Server functions for confirmation emails, 24-hour reminders, payment links and flight-status lookups',
+    ],
+    stack: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
+    image: 'projects/tenerife-booking.webp',
+    height: 750,
+    liveLabel: 'Book tickets',
+    live: 'https://book.tenerifetrustedtickets.com/',
+    extra: [{ label: 'Book transfers', href: 'https://book.tenerifetrustedtransfers.com/' }],
+  },
+  {
+    title: 'Tenerife Trusted Tickets – Website',
+    tag: 'Current job · new business launch',
+    summary:
+      'The website for a new excursions shop in Adeje: boat trips, Teide tours, jet ski, stargazing, theme parks and more, linked straight into the booking system.',
+    points: [
+      'Fully translated into English, Spanish and German, with a language switcher',
+      'Eight experience pages generated from one data file, so content stays consistent',
+      '“Book now” opens the booking form with the trip and language already chosen',
+    ],
+    stack: ['HTML', 'CSS', 'JavaScript', 'Vite'],
+    image: 'projects/tenerife-tickets.webp',
+    height: 750,
+    liveLabel: 'Visit website',
+    live: 'https://tenerifetrustedtickets.com/',
+  },
   {
     title: 'AI Career Recommender',
     tag: 'Final-year dissertation',
@@ -154,12 +189,13 @@ export const STRENGTHS = [
 export const EXPERIENCE = [
   {
     role: 'Web Developer & Booking Administrator',
-    org: 'Tenerife Trusted Transfers (remote)',
+    org: 'Tenerife Trusted Transfers & Tenerife Trusted Tickets (remote)',
     dates: 'Sep 2026 – Present',
     points: [
-      'Manage the company website and the transfer booking and ticketing system',
-      'Handle booking tickets and customer enquiries, resolving booking and technical issues',
-      'Create website content and social media updates to support bookings',
+      'Build and run the booking and admin system the team uses every day for transfers and excursion tickets (React, TypeScript, Supabase)',
+      'Built the website for the new Tenerife Trusted Tickets shop in English, Spanish and German',
+      'Handle booking enquiries and resolve booking and technical issues, escalating when needed',
+      'Manage the company website, Google Business Profile and social media content',
     ],
   },
   {

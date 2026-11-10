@@ -21,7 +21,7 @@ describe('portfolio', () => {
     for (const p of PROJECTS) {
       expect(screen.getByRole('heading', { name: p.title })).toBeTruthy();
       expect(document.querySelectorAll(`a[href="${p.live}"]`).length).toBeGreaterThan(0);
-      expect(document.querySelector(`a[href="${p.code}"]`)).toBeTruthy();
+      if (p.code) expect(document.querySelector(`a[href="${p.code}"]`)).toBeTruthy();
     }
   });
 

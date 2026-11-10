@@ -92,7 +92,7 @@ export function Hero() {
           {[
             ['BSc (Hons)', 'Computer Science'],
             ['2+ years', 'people-facing care work'],
-            ['5 projects', 'live with source code'],
+            ['7 projects', '2 used daily by a real business'],
             ['UK', 'full right to work'],
           ].map(([v, l]) => (
             <div key={l}>
@@ -240,9 +240,20 @@ export function Projects() {
                   <a href={p.live} {...ext} className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-ink-950 transition hover:bg-accent-soft">
                     <ExternalLink size={16} aria-hidden /> {p.liveLabel ?? 'Live demo'}
                   </a>
-                  <a href={p.code} {...ext} className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-white/5">
-                    <Github size={16} aria-hidden /> Source code
-                  </a>
+                  {p.extra?.map((l) => (
+                    <a key={l.href} href={l.href} {...ext} className="inline-flex items-center gap-2 rounded-lg border border-accent/40 px-4 py-2.5 text-sm font-medium text-accent transition hover:bg-accent/10">
+                      <ExternalLink size={16} aria-hidden /> {l.label}
+                    </a>
+                  ))}
+                  {p.code ? (
+                    <a href={p.code} {...ext} className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-white/5">
+                      <Github size={16} aria-hidden /> Source code
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-2 rounded-lg border border-dashed border-white/15 px-4 py-2.5 text-sm text-slate-400">
+                      <Lock size={15} aria-hidden /> Company code (private)
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.article>
