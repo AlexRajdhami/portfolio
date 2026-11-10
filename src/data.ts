@@ -44,6 +44,22 @@ export const PROJECTS: Project[] = [
     note: 'These are real customer booking pages – feel free to look around, but please don’t send test bookings.',
   },
   {
+    title: 'Tenerife Trusted Transfers – Website',
+    tag: 'Current job · company website',
+    summary:
+      'The main website for the transfers business: private airport transfers, car hire and excursions across Tenerife, with booking buttons that lead into the booking system.',
+    points: [
+      'Services, fleet, car hire and excursion pages, kept up to date with new content and photos',
+      '“Book Transfer” buttons connect the site to the online booking form',
+      'Look after search visibility, the Google Business Profile and social media posts',
+    ],
+    stack: ['WordPress', 'HTML', 'CSS', 'SEO', 'Google Business Profile'],
+    image: 'projects/tenerife-transfers.webp',
+    height: 760,
+    liveLabel: 'Visit website',
+    live: 'https://tenerifetrustedtransfers.com/',
+  },
+  {
     title: 'Tenerife Trusted Tickets – Website',
     tag: 'Current job · new business launch',
     summary:

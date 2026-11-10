@@ -92,7 +92,7 @@ export function Hero() {
           {[
             ['BSc (Hons)', 'Computer Science'],
             ['2+ years', 'people-facing care work'],
-            ['7 projects', '2 used daily by a real business'],
+            ['8 projects', '3 used daily by a real business'],
             ['UK', 'full right to work'],
           ].map(([v, l]) => (
             <div key={l}>
